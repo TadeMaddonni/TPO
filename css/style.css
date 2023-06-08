@@ -1,0 +1,128 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Global styles */
+
+body {
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+nav {
+    padding-block: 20px;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-inline: 10%;
+}
+
+.icon {
+    display: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.list {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 20px;
+    visibility: hidden;
+}
+
+nav span {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transform-origin: left;
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding-top: 20px;
+        height: 50px;
+        padding-inline: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: fit-content;
+        transition: all 0.2x ease;
+    }
+
+    .icon {
+        visibility: visible;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .list {
+        height: 100vh;
+        background-color: black;
+        padding-block: 20px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        right: -100vh;
+        top: 37px;
+        transition: all 0.2x ease;
+        gap: 60px;
+        font-weight: lighter;
+    }
+
+    .show {
+        transition: all 0.2x ease;
+        right: 0;
+    }
+
+    .show a {
+        color: white;
+    }
+
+    .dark {
+        transition: all 0.2x ease;
+    }
+
+    .dark svg {
+        color: white;
+    }
+
+    .dark .icon span:first-child {
+        background-color: white;
+        transform: rotate(45deg);
+    }
+
+    .dark .icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .dark .icon span:nth-child(3) {
+        background-color: white;
+        transform: rotate(-45deg);
+    }
+}

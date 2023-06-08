@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite App</title>
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Bootstrap -->
+        <!-- CSS stylesheet -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body class="wfull">
+        <!-- Navbar -->
+        <nav class="fixed w-full top-0 bg-black z-50">
+            <div class="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="list bg-black">
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="pages/tickets.html" class="linkTicket">Tickets</a>
+                </li>
+                <li><a href="#login">Inciar sesión</a></li>
+                <li class="px-[10px] py-[7px] rounded-lg bg-purple-700">
+                    <a href="pages/ticketForm.html">Crear Ticket</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main content -->
+        <main>
+            <!-- Hero section -->
+            <section class="hero px-[20px] mt-[80px] lg:px-[10%]">
+                <h1 class="text-4xl text-white lg:text-6xl">
+                    Bienvenido a <br />
+                    TM solutions
+                </h1>
+            </section>
+            <!-- Levantar ticket section -->
+            <section
+                class="hero pl-[20px] mt-[50px] flex flex-col items-end gap-[60px] lg:flex-row lg:px-[10%] lg:items-center justify-between"
+            >
+                <h2
+                    class="text-4xl text-white font-extralight pr-[20px] lg:text-5xl"
+                >
+                    Dejanos tu ticket, <br />
+                    nosotros nos ocupamos
+                </h2>
+                <div
+                    class="bg-purple-700 h-[50vh] w-[80vw] rounded-lg flex flex-col gap-7 items-start justify-center px-4 py-4 lg:w-[30vw] lg:h-[60vh] lg:px-[60px]"
+                >
+                    <h2 class="text-4xl font-light text-white lg:text-5xl">
+                        Levantá tu ticket, solucioná tus problemas
+                    </h2>
+                    <a
+                        class="bg-black py-[10px] px-[15px] text-white rounded-lg"
+                        href="pages/ticketForm.html"
+                        >Levantar Ticket</a
+                    >
+                </div>
+            </section>
+
+            <!-- Login section -->
+            <section
+                class="flex flex-col gap-10 px-[20px] mt-[40px] mb-[60px] lg:px-[10%]"
+                id="login"
+            >
+                <h2 class="text-4xl text-white font-light lg:text-5xl">
+                    Iniciá sesión
+                </h2>
+                <div>
+                    <form
+                        id="loginForm"
+                        class="flex flex-col gap-8 lg:w-[30vw]"
+                    >
+                        <div class="flex flex-col gap-3">
+                            <label class="text-white opacity-50" for=""
+                                >EMAIL</label
+                            >
+                            <input
+                                class="pl-4 py-[7px] rounded-md outline-none loginEmail"
+                                type="email"
+                                placeholder="nrios@gmail.com"
+                            />
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <label class="text-white opacity-50" for=""
+                                >CONTRASEÑA</label
+                            >
+                            <input
+                                class="pl-4 py-[7px] rounded-md outline-none loginPassword"
+                                type="password"
+                                placeholder="*********"
+                            />
+                        </div>
+                        <div>
+                            <button
+                                class="mt-2 bg-purple-700 px-5 py-2 rounded-md text-white"
+                            >
+                                Iniciar Sesión
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer
+            class="bg-white px-[20px] py-[40px] flex flex-col gap-10 mt-[100px] lg:px-[10%] lg:flex-row lg:justify-between"
+        >
+            <div>
+                <p class="text-xl">Seguinos en las redes</p>
+                <div class="flex gap-5 mt-3 cursor-pointer">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M22.212 5.656a8.384 8.384 0 0 1-2.401.658A4.195 4.195 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.621-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.169 4.169 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.205 4.205 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.394 8.394 0 0 1-6.192 1.732a11.831 11.831 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9c0-.18-.004-.362-.012-.541a8.497 8.497 0 0 0 2.086-2.164Z"
+                        />
+                    </svg>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3Z"
+                        />
+                    </svg>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"
+                        />
+                    </svg>
+                </div>
+            </div>
+            <div>
+                <span class="font-bold text-2xl">TM Solutions @2023</span>
+                <p class="text-xl">Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- Vanilla scripts -->
+        <script type="module" src="js/index.js"></script>
+    </body>
+</html>
