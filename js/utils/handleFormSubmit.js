@@ -2,9 +2,7 @@ import { setInfo } from "./handleLocalStorage.js";
 
 const handleLogin = (data, array) => {
     console.log(data, array);
-    const IsOnDatabase = array.find((user) =>
-        user.email == data.email ? true : false
-    );
+    const IsOnDatabase = array.find((user) => user.email == data.email);
     if (!IsOnDatabase) {
         const newData = {
             ...data,
@@ -15,6 +13,7 @@ const handleLogin = (data, array) => {
         setInfo("userAccount", newData);
         return true;
     } else {
+        console.log(IsOnDatabase);
         if (IsOnDatabase.password == data.password) {
             setInfo("userAccount", IsOnDatabase);
             return true;

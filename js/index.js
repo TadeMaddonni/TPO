@@ -1,8 +1,10 @@
 // Importing necessary utilities
 import { handleLogin } from "./utils/handleFormSubmit.js";
 import { tickets, users } from "./data/lists.js";
-import { getInfo } from "./utils/handleLocalStorage.js";
+import { getInfo, setInfo } from "./utils/handleLocalStorage.js";
 
+// Setting user database on local storage
+setInfo("users", users);
 // Flag variables
 const user = getInfo("userAccount");
 let isLogged = user ? true : false;
@@ -32,12 +34,13 @@ $(function () {
         const password = $(".loginPassword").val();
 
         //Validating & Handling login
-        if (password.length > 5) {
+        if (password.length > 0) {
             const userData = {
                 email,
                 password,
             };
             const loginResult = handleLogin(userData, users);
+            console.log(loginResult);
             if (loginResult) {
                 isLogged = true;
                 const userLogged = getInfo("userAccount");
