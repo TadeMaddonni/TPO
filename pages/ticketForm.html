@@ -13,7 +13,7 @@
 
     <body class="wfull">
         <!-- Navbar -->
-        <nav class="fixed w-full top-0 bg-black z-50">
+        <nav class="fixed w-full top-0 bg-black z-50 py-[40px]">
             <div class="icon">
                 <span></span>
                 <span></span>
@@ -22,10 +22,16 @@
 
             <ul class="list bg-black">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tickets.html" class="linkTicket">Tickets</a></li>
-                <li><a href="#login">Inciar sesión</a></li>
+                <li><a href="#" class="linkTicket">Tickets</a></li>
                 <li class="px-[10px] py-[7px] rounded-lg bg-purple-700">
                     <a href="">Crear Ticket</a>
+                </li>
+                <li
+                    class="px-[10px] py-[7px] rounded-lg bg-purple-700 hidden logoutContainer"
+                >
+                    <button id="logout" class="text-xl font-semibold">
+                        Cerrar sesión
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -103,15 +109,15 @@
                             >
                             <textarea
                                 class="pl-4 py-[7px] rounded-md outline-none ticketDescription"
-                                type="text"
-                                rows="10"
+                                rows="5"
                                 placeholder="Mi computadora no enciende al momento de apretar el botón de encendido"
                             >
+                            Mi computadora no enciende al momento de apretar el botón de encendido
                             </textarea>
                         </div>
                         <div>
                             <button
-                                class="mt-2 bg-black text-white px-5 py-2 rounded-md"
+                                class="mt-2 bg-black text-white px-5 py-3 rounded-md"
                             >
                                 Enviar TIcket
                             </button>
@@ -167,6 +173,9 @@
                 <p class="text-xl">Todos los derechos reservados</p>
             </div>
         </footer>
+
+        <!-- SweetAlert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <!-- JQUERY -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>

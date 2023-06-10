@@ -1,7 +1,7 @@
 // Importing necessary utilities
 import { handleLogin } from "./utils/handleFormSubmit.js";
 import { tickets, users } from "./data/lists.js";
-import { getInfo, setInfo } from "./utils/handleLocalStorage.js";
+import { deleteInfo, getInfo, setInfo } from "./utils/handleLocalStorage.js";
 
 // Setting user database on local storage
 setInfo("users", users);
@@ -45,17 +45,44 @@ $(function () {
                 isLogged = true;
                 const userLogged = getInfo("userAccount");
                 console.log(userLogged);
-                if (userLogged.role == "employee") {
-                    window.location.href = "./pages/ticketsEmpleados.html";
-                } else if (userLogged.role == "coord") {
-                    window.location.href = "./pages/ticketsCoord.html";
-                } else {
-                    window.location.href = "./pages/ticketsClientes.html";
-                }
+                Swal.fire({
+                    title: "Sesión iniciada",
+                    text: "Serás redirigido a la página de tickets",
+                    icon: "success",
+                    confirmButtonText: "seguir",
+                });
+                setTimeout(() => {
+                    if (userLogged.role == "employee") {
+                        window.location.href = "./pages/ticketsEmpleados.html";
+                    } else if (userLogged.role == "coord") {
+                        window.location.href = "./pages/ticketsCoord.html";
+                    } else {
+                        window.location.href = "./pages/ticketsClientes.html";
+                    }
+                }, 2000);
+            } else {
+                Swal.fire({
+                    title: "Credenciales no validas",
+                    text: "Por favor, intente de nuevo",
+                    icon: "error",
+                    confirmButtonText: "seguir",
+                });
             }
             console.log(isLogged);
         }
     });
+
+    // Logout
+    const logoutBtn = $("#logout");
+    if (user?.role) {
+        $(".logoutContainer").show();
+        $("#loginBtn").hide();
+        logoutBtn.on("click", () => {
+            deleteInfo("userAccount");
+            $(".logoutContainer").hide();
+            console.log("name");
+        });
+    }
 
     // Protected Routes
     const ticketLink = $(".linkTicket");
@@ -72,7 +99,7 @@ $(function () {
         });
     } else {
         ticketLink?.on("click", () => {
-            ticketLink.attr("href", "./index.html");
+            ticketLink.attr("href", "../index.html");
         });
     }
 });

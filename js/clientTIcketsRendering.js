@@ -16,9 +16,9 @@ $(function () {
     const usertickets = tickets.filter(
         (ticket) => ticket.ticketEmail === email
     );
-    // Rendering tickets
 
-    if (usertickets.length !== 0) {
+    // Rendering tickets
+    if (usertickets.length > 0) {
         usertickets.forEach((ticket) => {
             const employee = users.find(
                 (user) => user.id === parseInt(ticket.treatedBy)

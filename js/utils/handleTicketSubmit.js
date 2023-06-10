@@ -16,6 +16,7 @@ const handleTicketSubmit = (ticket) => {
         // Adding tickets to the list
         tickets.push(newTicket);
         setInfo("tickets", tickets);
+        return true;
     } else {
         return false;
     }

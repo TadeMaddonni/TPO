@@ -23,9 +23,13 @@
             <ul class="list bg-black">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="">Tickets</a></li>
-                <li><a href="#login">Inciar sesión</a></li>
                 <li class="px-[10px] py-[7px] rounded-lg bg-purple-700">
-                    <a href="">Crear Ticket</a>
+                    <a href="ticketForm.html">Crear Ticket</a>
+                </li>
+                <li
+                    class="px-[10px] py-[7px] rounded-lg bg-purple-700 hidden logoutContainer"
+                >
+                    <button id="logout">Cerrar sesión</button>
                 </li>
             </ul>
         </nav>
@@ -37,11 +41,11 @@
                 class="hero px-[20px] mt-[80px] flex flex-col gap-5 lg:px-[10%] lg:mt-[100px]"
             >
                 <h1
-                    class="text-5xl text-white font-light lg:text-6xl lg:w-[40%]"
+                    class="text-3xl text-white font-light lg:text-6xl lg:w-[40%]"
                 >
                     Hola
-                    <span class="font-bold" id="helloText"></span>, Confirmá el
-                    estado de tus tickets
+                    <span class="font-bold" id="helloText"></span>,<br />
+                    Confirmá el estado de tus tickets
                 </h1>
             </section>
 
@@ -126,6 +130,6 @@
         <!-- Vanilla scripts -->
         <script type="module" src="../js/index.js"></script>
         <script type="module" src="../js/tickets.js"></script>
-        <script type="module" src="../js/ticketsRendering.js"></script>
+        <script type="module" src="../js/clientTIcketsRendering.js"></script>
     </body>
 </html>

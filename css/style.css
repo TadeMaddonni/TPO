@@ -33,7 +33,12 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
+}
+
+nav button {
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .list {
@@ -62,7 +67,9 @@ nav span {
 
 @media (max-width: 768px) {
     nav {
+        z-index: 1000;
         padding-top: 20px;
+        padding-block: 20px !important;
         height: 50px;
         padding-inline: 0;
         flex-direction: column;

@@ -8,4 +8,9 @@ const getInfo = (key) => {
     return data;
 };
 
-export { setInfo, getInfo };
+const deleteInfo = (key) => {
+    localStorage.removeItem(key);
+    return true;
+};
+
+export { setInfo, getInfo, deleteInfo };

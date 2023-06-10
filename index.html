@@ -25,9 +25,14 @@
                 <li>
                     <a href="pages/tickets.html" class="linkTicket">Tickets</a>
                 </li>
-                <li><a href="#login">Inciar sesión</a></li>
-                <li class="px-[10px] py-[7px] rounded-lg bg-purple-700">
+                <li><a href="#login" id="loginBtn">Inciar sesión</a></li>
+                <li class="px-[10px] py-[5px] rounded-lg bg-purple-700">
                     <a href="pages/ticketForm.html">Crear Ticket</a>
+                </li>
+                <li
+                    class="px-[10px] py-[7px] rounded-lg bg-purple-700 hidden logoutContainer"
+                >
+                    <button id="logout">Cerrar sesión</button>
                 </li>
             </ul>
         </nav>
@@ -157,6 +162,8 @@
             </div>
         </footer>
 
+        <!-- Sweet alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- JQUERY -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
         <!-- Vanilla scripts -->

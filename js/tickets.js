@@ -1,6 +1,6 @@
 import { handleTicketSubmit } from "./utils/handleTicketSubmit.js";
 import { tickets, users } from "./data/lists.js";
-import { getInfo } from "./utils/handleLocalStorage.js";
+import { deleteInfo, getInfo } from "./utils/handleLocalStorage.js";
 
 $(function () {
     const ticketForm = $("#ticketForm");
@@ -35,7 +35,22 @@ $(function () {
                 ticketEmail,
                 ticketDescription,
             };
-            handleTicketSubmit(ticket, tickets);
+            const res = handleTicketSubmit(ticket, tickets);
+            if (res) {
+                Swal.fire({
+                    title: "Ticket enviado",
+                    text: "Podrás visualizar el estado del mismo, iniciando sesión con el mail ingresado",
+                    icon: "success",
+                    confirmButtonText: "Continuar",
+                });
+            } else {
+                Swal.fire({
+                    title: "Error",
+                    text: "No se pudo enviar el ticket",
+                    icon: "error",
+                    confirmButtonText: "Continuar",
+                });
+            }
         }
     });
 
@@ -55,7 +70,17 @@ $(function () {
         });
     } else {
         ticketLink?.on("click", () => {
-            ticketLink.attr("href", "./index.html");
+            ticketLink.attr("href", "../index.html");
+        });
+    }
+    // Logout
+    const logoutBtn = $("#logout");
+    console.log(logoutBtn);
+    if (isLogged) {
+        $(".logoutContainer").show();
+        logoutBtn.on("click", () => {
+            deleteInfo("userAccount");
+            window.location.href = "../index.html";
         });
     }
 });
