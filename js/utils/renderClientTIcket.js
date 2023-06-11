@@ -37,7 +37,7 @@ const renderClientTicket = (ticketInfo) => {
                     <div class="flex justify-center gap-[30px] lg:items-center flex-wrap">
                         <a
                             class="flex bg-purple-700 px-[20px] py-[10px] h-[45px] w-[60%] text-white  rounded-md font-semibold justify-center items-center gap-[10px] lg:h-fit lg:py-[9px] lg:w-fit"
-                            href="mailto:${ticketInfo.email}"
+                            href="mailto:${ticketInfo.ticketEmail}"
                             >Contactar
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

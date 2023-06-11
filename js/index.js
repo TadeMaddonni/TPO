@@ -5,6 +5,8 @@ import { deleteInfo, getInfo, setInfo } from "./utils/handleLocalStorage.js";
 
 // Setting user database on local storage
 setInfo("users", users);
+setInfo("tickets", tickets);
+
 // Flag variables
 const user = getInfo("userAccount");
 let isLogged = user ? true : false;

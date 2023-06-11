@@ -1,6 +1,37 @@
 import { getInfo } from "../utils/handleLocalStorage.js";
 
-const tickets = getInfo("tickets") || [];
+const tickets = getInfo("tickets") || [
+    {
+        createdBy: "asd@gmail.com",
+        ticketDescription: "asdasdasd",
+        ticketDevice: "celular",
+        ticketEmail: "asd@gmail.com",
+        ticketId: 1,
+        ticketLastname: "tade",
+        ticketName: "taade",
+        treatedBy: 1,
+    },
+    {
+        createdBy: "asd@gmail.com",
+        ticketDescription: "asdasdasd",
+        ticketDevice: "computadora",
+        ticketEmail: "asd@gmail.com",
+        ticketId: 2,
+        ticketLastname: "tade",
+        ticketName: "taade",
+        treatedBy: 5,
+    },
+    {
+        createdBy: "asd@gmail.com",
+        ticketDescription: "asdasdasd",
+        ticketDevice: "otro",
+        ticketEmail: "asd@gmail.com",
+        ticketId: 3,
+        ticketLastname: "tade",
+        ticketName: "taade",
+        treatedBy: 5,
+    },
+];
 
 const users = [
     {
