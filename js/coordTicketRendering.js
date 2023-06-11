@@ -48,6 +48,22 @@ $(function () {
             }
             const div = renderCoordTicket(data);
             $(".ticketSection").append(div);
+
+            // Handle cta's
+            const ctaButtons = $(".verMas");
+            const handleCta = () => {
+                Swal.fire({
+                    title: "Proximamente!",
+                    text: "Esta funcionalidad estará disponible en la próxima versión",
+                    icon: "info",
+                    confirmButtonText: "Volver",
+                });
+                return;
+            };
+            ctaButtons.on("click", (e) => {
+                e.stopPropagation();
+                handleCta();
+            });
         });
     } else {
         const element = document.createElement("h2");
