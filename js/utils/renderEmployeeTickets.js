@@ -1,6 +1,6 @@
 const renderEmployeeTickets = (ticketInfo) => {
     return `<div
-                    class="p-[20px] bg-white rounded-md w-full flex flex-col gap-[20px] lg:flex-row lg:justify-between"
+                    class="p-[30px] bg-white rounded-md w-full flex flex-col gap-[20px] lg:flex-row lg:justify-between"
                 >
                     <div class="flex flex-col gap-[15px] lg:gap-[25px]  w-min-[80%]">
                         <div

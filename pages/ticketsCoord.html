@@ -22,13 +22,39 @@
 
             <ul class="list bg-black">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tickets.html">Tickets</a></li>
-                <li><a href="#login">Inciar sesión</a></li>
+                <li><a href="">Tickets</a></li>
                 <li class="px-[10px] py-[7px] rounded-lg bg-purple-700">
-                    <a href="">Crear Ticket</a>
+                    <a href="ticketForm.html">Crear Ticket</a>
+                </li>
+                <li
+                    class="px-[10px] py-[7px] rounded-lg bg-purple-700 hidden logoutContainer"
+                >
+                    <button id="logout">Cerrar sesión</button>
                 </li>
             </ul>
         </nav>
+
+        <!-- Main content -->
+        <main class="min-h-[60vh] lg:min-h-[90vh]">
+            <!-- Hero section -->
+            <section
+                class="hero px-[20px] mt-[80px] flex flex-col items-center justify-center gap-5 lg:items-start lg:px-[10%] lg:mt-[100px]"
+            >
+                <h1
+                    class="text-3xl text-white font-light lg:text-5xl lg:w-[50%]"
+                >
+                    Hola
+                    <span class="font-bold" id="helloText"></span>, <br />
+                    Tenés estos tickets asignados
+                </h1>
+            </section>
+
+            <!-- Your tickets section -->
+            <section
+                class="ticketSection h-[100%] items-center justify-center px-[30px] mt-[50px] flex flex-col gap-[40px] lg:px-[10%] lg:mt-[70px]"
+            ></section>
+        </main>
+        <!-- Footer -->
         <footer
             class="bg-white px-[20px] py-[40px] flex flex-col gap-10 mt-[100px] lg:px-[10%] lg:flex-row lg:justify-between"
         >
@@ -81,5 +107,6 @@
         <!-- Vanilla scripts -->
         <script type="module" src="../js/index.js"></script>
         <script type="module" src="../js/tickets.js"></script>
+        <script type="module" src="../js/coordTicketRendering.js"></script>
     </body>
 </html>

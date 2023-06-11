@@ -6,7 +6,7 @@ const users = [
     {
         role: "employee",
         email: "tade@gmail.com",
-        password: "tade",
+        password: "tade123",
         id: 1,
     },
     {
@@ -20,6 +20,24 @@ const users = [
         password: "asd123",
         role: "client",
         id: 3,
+    },
+    {
+        role: "coord",
+        email: "nrios@uade.edu.ar",
+        password: "profe",
+        id: 4,
+    },
+    {
+        role: "employee",
+        email: "tmaddonni@uade.edu.ar",
+        password: "tade",
+        id: 5,
+    },
+    {
+        role: "coord",
+        email: "mgalluzzo@gmail.com",
+        password: "mate",
+        id: 6,
     },
 ];
 
