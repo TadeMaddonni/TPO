@@ -42,8 +42,8 @@ const users = [
     },
     {
         role: "coord",
-        email: "galluzzo@gmail.com",
-        password: "gallu123",
+        email: "magalluzzo@uade.edu.ar",
+        password: "mate123",
         id: 2,
     },
     {
@@ -61,7 +61,7 @@ const users = [
     {
         role: "employee",
         email: "tmaddonni@uade.edu.ar",
-        password: "tade",
+        password: "tade123",
         id: 5,
     },
     {

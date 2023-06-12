@@ -5,7 +5,9 @@ import { renderEmployeeTickets } from "./utils/renderEmployeeTickets.js";
 $(function () {
     // Employee Tickets Rendering
     const user = getInfo("userAccount");
-    console.log(user);
+    if (!user) {
+        window.location.href = "../index.html";
+    }
     // Destructuring the name of the user & the Id
     const { email, id } = user;
 

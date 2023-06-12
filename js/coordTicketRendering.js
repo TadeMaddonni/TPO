@@ -3,8 +3,11 @@ import { getInfo } from "./utils/handleLocalStorage.js";
 import { renderCoordTicket } from "./utils/renderCoordTicket.js";
 
 $(function () {
-    // Employee Tickets Rendering
+    // Coord Tickets Rendering
     const user = getInfo("userAccount");
+    if (!user) {
+        window.location.href = "../index.html";
+    }
     console.log(user);
     // Destructuring the name of the user & the Id
     const { email, id } = user;

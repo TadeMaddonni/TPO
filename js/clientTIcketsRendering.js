@@ -4,7 +4,9 @@ import { renderClientTicket } from "./utils/renderClientTIcket.js";
 
 $(function () {
     const user = getInfo("userAccount");
-
+    if (!user) {
+        window.location.href = "../index.html";
+    }
     // Destructuring the name of the user & the Id
     const { email, id } = user;
 
