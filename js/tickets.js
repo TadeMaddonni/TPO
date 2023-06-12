@@ -51,6 +51,13 @@ $(function () {
                     confirmButtonText: "Continuar",
                 });
             }
+        } else {
+            Swal.fire({
+                title: "Error",
+                text: "Algunos campos están vacíos",
+                icon: "error",
+                confirmButtonText: "Continuar",
+            });
         }
     });
 
